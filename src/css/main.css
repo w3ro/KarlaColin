@@ -1,0 +1,238 @@
+/* ============================================================
+   MAIN CSS — Entry point
+   Order matters: tokens → reset → utilities → components
+   Karla Colin Maya | v1.0
+   ============================================================ */
+@import url('./tokens.css');
+@import url('./reset.css');
+@import url('./utilities.css');
+@import url('./components.css');
+
+/* ── Global Section Styles ── */
+section { width: 100%; }
+
+/* ── Section Header Pattern ── */
+.section_header {
+  max-width: 55ch;
+}
+
+.section_header.center {
+  text-align: center;
+  margin-inline: auto;
+}
+
+.section_subtitle {
+  font-size: clamp(var(--font-size-base), 1.5vw, var(--font-size-lg));
+  color: var(--color-text-muted);
+  line-height: var(--line-height-relaxed);
+  margin-top: var(--space-4);
+}
+
+/* ── Pull Quote ── */
+.pullquote {
+  position: relative;
+  padding: var(--space-8) var(--space-10);
+  background-color: var(--color-primary-pale);
+  border-radius: var(--radius-2xl);
+  margin-block: var(--space-10);
+}
+
+.pullquote::before {
+  content: '\201C';
+  position: absolute;
+  top: -0.5rem;
+  left: var(--space-6);
+  font-size: 6rem;
+  font-family: var(--font-family-heading);
+  color: var(--color-primary);
+  line-height: 1;
+  opacity: 0.3;
+}
+
+.pullquote p {
+  font-size: clamp(var(--font-size-lg), 2vw, var(--font-size-2xl));
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  line-height: var(--line-height-snug);
+  font-style: italic;
+}
+
+.pullquote cite {
+  display: block;
+  margin-top: var(--space-4);
+  font-size: var(--font-size-sm);
+  font-style: normal;
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+/* ── CTA Banner ── */
+.cta_banner {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-16) var(--space-12);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta_banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 60%;
+  aspect-ratio: 1;
+  background: rgba(255,255,255,0.05);
+  border-radius: var(--radius-full);
+}
+
+.cta_banner::after {
+  content: '';
+  position: absolute;
+  bottom: -40%;
+  left: -10%;
+  width: 40%;
+  aspect-ratio: 1;
+  background: rgba(255,255,255,0.05);
+  border-radius: var(--radius-full);
+}
+
+.cta_banner-content { position: relative; z-index: 1; }
+
+.cta_banner-title {
+  font-size: clamp(var(--font-size-2xl), 3vw, var(--font-size-4xl));
+  font-weight: var(--font-weight-extrabold);
+  color: white;
+  line-height: var(--line-height-tight);
+}
+
+.cta_banner-desc {
+  font-size: var(--font-size-lg);
+  color: rgba(255,255,255,0.85);
+  margin-top: var(--space-4);
+  max-width: 55ch;
+  margin-inline: auto;
+  line-height: var(--line-height-relaxed);
+}
+
+.cta_banner-buttons {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: var(--space-8);
+}
+
+/* ── Org Tags ── */
+.org_tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+}
+
+/* ── Toast Notification ── */
+.toast {
+  position: fixed;
+  bottom: var(--space-6);
+  left: 50%;
+  transform: translateX(-50%) translateY(6rem);
+  z-index: var(--z-toast);
+  background-color: var(--color-text);
+  color: white;
+  padding: var(--space-4) var(--space-6);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  box-shadow: var(--shadow-2xl);
+  transition: transform var(--transition-bounce);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.toast.is-visible {
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ── Legal pages content ── */
+.legal-content {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-loose);
+  color: var(--color-text-secondary);
+}
+
+.legal-content section {
+  margin-bottom: var(--space-10);
+}
+
+.legal-content h2 {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+  margin-bottom: var(--space-4);
+  margin-top: var(--space-10);
+  padding-bottom: var(--space-3);
+  border-bottom: 2px solid var(--color-primary-pale);
+}
+
+.legal-content h3 {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-2);
+}
+
+.legal-content p {
+  margin-bottom: var(--space-4);
+}
+
+.legal-content ul {
+  margin-bottom: var(--space-4);
+  padding-left: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.legal-content li::marker {
+  color: var(--color-primary);
+}
+
+.legal-content a {
+  color: var(--color-primary);
+  text-underline-offset: 3px;
+}
+
+.legal-content a:hover {
+  color: var(--color-primary-hover);
+}
+
+.legal-content em {
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+/* ── Print styles ── */
+@media print {
+  .nav_wrapper,
+  .scroll-to-top,
+  .theme-toggle,
+  .nav_hamburger { display: none !important; }
+
+  body {
+    color: black;
+    background: white;
+    font-size: 12pt;
+  }
+
+  a { text-decoration: underline; color: black; }
+
+  h1, h2, h3, h4 { page-break-after: avoid; }
+
+  img { max-width: 100% !important; page-break-inside: avoid; }
+}

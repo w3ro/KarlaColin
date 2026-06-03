@@ -1,0 +1,155 @@
+/* ============================================================
+   DESIGN TOKENS — Client First methodology (Finsweet)
+   Karla Colin Maya | v1.0
+   ============================================================ */
+
+:root {
+  /* ── Brand Colors ── */
+  --color-primary:        #5B21B6;
+  --color-primary-hover:  #4C1D95;
+  --color-primary-light:  #7C3AED;
+  --color-primary-pale:   #F5F3FF;
+  --color-accent:         #B45309;
+  --color-accent-hover:   #92400E;
+  --color-accent-light:   #FEF3C7;
+
+  /* ── Neutral ── */
+  --color-bg:             #FFFFFF;
+  --color-bg-alt:         #F8F7FF;
+  --color-bg-subtle:      #F3F4F6;
+  --color-surface:        #FFFFFF;
+  --color-border:         #E5E7EB;
+  --color-border-focus:   #7C3AED;
+
+  /* ── Text ── */
+  --color-text:           #111827;
+  --color-text-secondary: #374151;
+  --color-text-muted:     #6B7280;
+  --color-text-inverse:   #FFFFFF;
+
+  /* ── Status ── */
+  --color-success:        #059669;
+  --color-error:          #DC2626;
+  --color-warning:        #D97706;
+
+  /* ── Typography ── */
+  --font-family-heading:  'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-family-body:     'Inter', system-ui, -apple-system, sans-serif;
+  --font-family-mono:     'JetBrains Mono', ui-monospace, monospace;
+
+  --font-size-xs:    0.75rem;   /* 12px */
+  --font-size-sm:    0.875rem;  /* 14px */
+  --font-size-base:  1rem;      /* 16px */
+  --font-size-md:    1.125rem;  /* 18px */
+  --font-size-lg:    1.25rem;   /* 20px */
+  --font-size-xl:    1.5rem;    /* 24px */
+  --font-size-2xl:   1.875rem;  /* 30px */
+  --font-size-3xl:   2.25rem;   /* 36px */
+  --font-size-4xl:   3rem;      /* 48px */
+  --font-size-5xl:   3.75rem;   /* 60px */
+  --font-size-6xl:   4.5rem;    /* 72px */
+
+  --font-weight-regular:  400;
+  --font-weight-medium:   500;
+  --font-weight-semibold: 600;
+  --font-weight-bold:     700;
+  --font-weight-extrabold:800;
+
+  --line-height-tight:  1.2;
+  --line-height-snug:   1.375;
+  --line-height-normal: 1.5;
+  --line-height-relaxed:1.625;
+  --line-height-loose:  1.8;
+
+  --letter-spacing-tight: -0.025em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide:   0.025em;
+  --letter-spacing-wider:  0.05em;
+  --letter-spacing-widest: 0.1em;
+
+  /* ── Spacing (4-pt grid) ── */
+  --space-1:   0.25rem;   /* 4px  */
+  --space-2:   0.5rem;    /* 8px  */
+  --space-3:   0.75rem;   /* 12px */
+  --space-4:   1rem;      /* 16px */
+  --space-5:   1.25rem;   /* 20px */
+  --space-6:   1.5rem;    /* 24px */
+  --space-8:   2rem;      /* 32px */
+  --space-10:  2.5rem;    /* 40px */
+  --space-12:  3rem;      /* 48px */
+  --space-16:  4rem;      /* 64px */
+  --space-20:  5rem;      /* 80px */
+  --space-24:  6rem;      /* 96px */
+  --space-32:  8rem;      /* 128px */
+  --space-40:  10rem;     /* 160px */
+  --space-48:  12rem;     /* 192px */
+
+  /* ── Section Padding (Client First) ── */
+  --padding-section-small:  var(--space-12);
+  --padding-section-medium: var(--space-20);
+  --padding-section-large:  var(--space-32);
+  --padding-global:         var(--space-6);
+
+  /* ── Border Radius ── */
+  --radius-sm:   0.25rem;
+  --radius-md:   0.5rem;
+  --radius-lg:   0.75rem;
+  --radius-xl:   1rem;
+  --radius-2xl:  1.5rem;
+  --radius-full: 9999px;
+
+  /* ── Shadows ── */
+  --shadow-xs:  0 1px 2px rgb(0 0 0 / 0.05);
+  --shadow-sm:  0 1px 3px rgb(0 0 0 / 0.1), 0 1px 2px rgb(0 0 0 / 0.06);
+  --shadow-md:  0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -1px rgb(0 0 0 / 0.06);
+  --shadow-lg:  0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.05);
+  --shadow-xl:  0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --shadow-focus: 0 0 0 3px rgb(124 58 237 / 0.5);
+
+  /* ── Transitions ── */
+  --transition-fast:   150ms ease;
+  --transition-base:   250ms ease;
+  --transition-slow:   400ms ease;
+  --transition-bounce: 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ── Z-index ── */
+  --z-below:   -1;
+  --z-base:     0;
+  --z-above:    1;
+  --z-dropdown: 100;
+  --z-sticky:   200;
+  --z-modal:    300;
+  --z-toast:    400;
+  --z-tooltip:  500;
+
+  /* ── Containers (Client First) ── */
+  --container-large:  80rem;   /* 1280px */
+  --container-medium: 60rem;   /* 960px  */
+  --container-small:  44rem;   /* 704px  */
+}
+
+/* ── Dark Mode Tokens ── */
+[data-theme="dark"] {
+  --color-primary:        #A78BFA;
+  --color-primary-hover:  #C4B5FD;
+  --color-primary-light:  #8B5CF6;
+  --color-primary-pale:   #1E1033;
+  --color-accent:         #FCD34D;
+  --color-accent-hover:   #FDE68A;
+  --color-accent-light:   #2D1A00;
+
+  --color-bg:             #0D0A1E;
+  --color-bg-alt:         #130D2B;
+  --color-bg-subtle:      #1F1635;
+  --color-surface:        #1A1035;
+  --color-border:         #2D2453;
+  --color-border-focus:   #A78BFA;
+
+  --color-text:           #F9FAFB;
+  --color-text-secondary: #E5E7EB;
+  --color-text-muted:     #9CA3AF;
+  --color-text-inverse:   #111827;
+
+  --shadow-focus: 0 0 0 3px rgb(167 139 250 / 0.5);
+}
